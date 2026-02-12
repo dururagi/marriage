@@ -46,7 +46,12 @@
     <!-- Hero Section -->
     <section class="relative h-screen flex flex-col items-center justify-center text-center px-4 overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Main Wedding" class="w-full h-full object-cover opacity-60">
+            <img
+  src="topimage.jpg"
+  onerror="this.onerror=null; this.src='topimage.png';"
+  alt="이주락 & 전누리"
+  class="w-full h-full object-cover opacity-60"
+/>
             <div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/20 to-white"></div>
         </div>
         
@@ -92,7 +97,7 @@
                 <p><strong>주락</strong></p>
             </div>
             <div class="flex items-center justify-center space-x-2">
-                <p><strong>아버님 · 어머님</strong>의</p>
+                <p><strong>전종호 · 김옥순</strong>의</p>
                 <p class="text-sm text-gray-400">女</p>
                 <p><strong>누리</strong></p>
             </div>
@@ -164,6 +169,34 @@
         </div>
     </section>
 
+    <!-- Face Photos (between Parking and Account Transfer) -->
+    <section class="py-14 px-6 bg-white fade-in">
+        <div class="grid grid-cols-2 gap-4">
+            <!-- face01 -->
+            <div class="h-44 rounded-lg overflow-hidden border border-stone-100 shadow-sm bg-stone-50 flex items-center justify-center">
+                <img
+                    src="face01.jpg"
+                    onerror="this.onerror=null; this.src='face01.png';"
+                    alt="face01"
+                    class="w-full h-full object-contain"
+                    loading="lazy"
+                >
+            </div>
+
+            <!-- face02 -->
+            <div class="h-44 rounded-lg overflow-hidden border border-stone-100 shadow-sm bg-stone-50 flex items-center justify-center">
+                <img
+                    src="face02.jpg"
+                    onerror="this.onerror=null; this.src='face02.png';"
+                    alt="face02"
+                    class="w-full h-full object-contain"
+                    loading="lazy"
+                >
+            </div>
+        </div>
+    </section>
+
+
     <!-- Account Transfer (축의금) -->
     <section class="py-20 px-8 bg-stone-50 fade-in">
         <h3 class="text-center text-xl tracking-widest mb-4">마음 전하실 곳</h3>
@@ -178,8 +211,8 @@
                 <div id="groom-account" class="accordion-content bg-stone-50 px-5 space-y-3">
                     <div class="pb-4 pt-2 flex justify-between items-center text-sm">
                         <div>
-                            <p class="text-xs text-gray-400">신한은행</p>
-                            <p>110-123-456789 (이주락)</p>
+                            <p class="text-xs text-gray-400">농협은행</p>
+                            <p>302-0024-5796-11 (이주락)</p>
                         </div>
                         <button onclick="copyToClipboard('110-123-456789')" class="px-3 py-1 bg-white border border-stone-200 rounded text-[10px] text-gray-500 hover:bg-stone-100">복사</button>
                     </div>
@@ -194,8 +227,8 @@
                 <div id="bride-account" class="accordion-content bg-stone-50 px-5 space-y-3">
                     <div class="pb-4 pt-2 flex justify-between items-center text-sm">
                         <div>
-                            <p class="text-xs text-gray-400">국민은행</p>
-                            <p>987654-01-234567 (전누리)</p>
+                            <p class="text-xs text-gray-400">카카오뱅크</p>
+                            <p>3333-22-8363896 (전누리)</p>
                         </div>
                         <button onclick="copyToClipboard('987654-01-234567')" class="px-3 py-1 bg-white border border-stone-200 rounded text-[10px] text-gray-500 hover:bg-stone-100">복사</button>
                     </div>
