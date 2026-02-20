@@ -41,53 +41,59 @@
         }
     </style>
 </head>
-<body class="max-w-md mx-auto shadow-2xl bg-white min-h-screen overflow-x-hidden">
+<body class="max-w-md mx-auto shadow-2xl bg-[#fcfbf8] min-h-screen overflow-x-hidden">
 
     <!-- Hero Section -->
     <section class="relative h-screen flex flex-col items-center justify-center text-center px-4 overflow-hidden">
-        <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 z-0 bg-[#fcfbf8]">
+            <!-- 1. 사진을 100% 선명하게 (opacity 클래스 완전 제거) -->
             <img
-  src="topimage.jpg"
-  onerror="this.onerror=null; this.src='topimage.png';"
-  alt="이주락 & 전누리"
-  class="w-full h-full object-cover opacity-60"
-/>
-            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/20 to-white"></div>
+                src="topimage.jpg"
+                onerror="this.onerror=null; this.src='topimage.png';"
+                alt="이주락 & 전누리"
+                class="w-full h-full object-cover"
+            />
+            <!-- 원인 해결: 사진 전체를 덮던 뿌연 안개 필터를 삭제했습니다 -->
+            <!-- 자연스러운 연결을 위해 맨 아래쪽에만 얇은 그라데이션 추가 -->
+            <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#fcfbf8] to-transparent"></div>
         </div>
         
-        <div class="relative z-10 space-y-6">
-            <h2 class="text-sm tracking-[0.3em] uppercase text-gray-600 mb-2">Save the Date</h2>
+        <!-- 2. 글자 가독성 해결: 고급스러운 반투명 유리 박스(backdrop-blur) 적용 -->
+        <div class="relative z-10 w-[92%] max-w-sm mx-auto bg-white/70 backdrop-blur-md px-6 py-10 rounded-2xl shadow-lg border border-white/50 space-y-6">
+            <h2 class="text-sm tracking-[0.3em] uppercase text-gray-800 font-bold mb-2">Save the Date</h2>
             <div class="space-y-2">
-                <p class="text-3xl font-light">이주락 <span class="text-xl mx-2">&</span> 전누리</p>
+                <p class="text-3xl font-light text-gray-900">이주락 <span class="text-xl mx-2 text-gray-500">&</span> 전누리</p>
             </div>
             <div class="w-px h-16 bg-gray-400 mx-auto my-6"></div>
-            <p class="text-lg tracking-widest">2026. 05. 17. SUN AM 11:30</p>
-            <p class="text-sm text-gray-500">서울 세인트메리엘, 1층 메리엘 홀</p>
+            <p class="text-[17px] tracking-widest text-gray-900 font-medium">2026. 05. 17. SUN AM 11:30</p>
+            <p class="text-[13px] text-gray-800">서울 세인트메리엘, 1층 메리엘 홀</p>
         </div>
 
-        <div class="absolute bottom-10 left-0 right-0 animate-bounce text-gray-400">
+        <div class="absolute bottom-10 left-0 right-0 animate-bounce text-gray-600 drop-shadow-md z-10">
             <i class="fa-solid fa-chevron-down"></i>
         </div>
     </section>
 
     <!-- Invitation Text -->
-    <section class="py-24 px-8 text-center space-y-10 fade-in">
-        <h3 class="text-xl text-amber-800/70 tracking-[0.2em]">초대합니다</h3>
-        <div class="space-y-8 leading-loose text-gray-600">
-            <p>
-                곁에 있을 때 가장 나다운 모습이 되게 하는 사람,<br>
-                꿈꿔왔던 미래를 함께 그려나갈 수 있는<br>
-                서로를 만났습니다.
-            </p>
-            <p>
-                저희의 새로운 시작을 축복해 주시는<br>
-                그 따뜻한 마음 잊지 않고<br>
-                서로 아끼며 예쁘게 잘 살겠습니다.
-            </p>
-            <p>
-                귀한 걸음 하시어 저희의 앞날을<br>
-                함께 축복해 주시면 감사하겠습니다.
-            </p>
+    <section class="py-24 px-2 text-center space-y-10 fade-in">
+        <h3 class="text-xl text-amber-800/80 tracking-[0.2em]">초대합니다</h3>
+        
+        <!-- 3. 줄바꿈 방지: whitespace-nowrap 적용으로 모바일 화면에서도 1줄 유지 -->
+        <div class="space-y-8 leading-loose text-gray-600 text-[14px] sm:text-[15px] flex flex-col items-center overflow-x-hidden">
+            <div class="w-full">
+                <p class="whitespace-nowrap">닮은 점에 활짝 웃고</p>
+                <p class="whitespace-nowrap">다른 점으로부터 서로 배우는</p>
+                <p class="whitespace-nowrap">두 사람이 만났습니다.</p>
+            </div>
+            <div class="w-full">
+                <p class="whitespace-nowrap">저희의 새로운 시작을 축복해 주시는</p>
+                <p class="whitespace-nowrap">그 따뜻한 마음 잊지 않고</p>
+                <p class="whitespace-nowrap">서로 아끼며 살아 가고자 합니다.</p>
+            </div>
+            <div class="w-full">
+                <p class="whitespace-nowrap">시간 내어 귀한 걸음해주신 점</p>
+                <p class="whitespace-nowrap">오래 잊지 않고 감사드리겠습니다.</p>
+            </div>
         </div>
         
         <div class="pt-12 space-y-4 text-lg">
@@ -139,7 +145,6 @@
                 <p class="text-sm text-gray-500 mb-6">서울 강남구 역삼동 828-10 (1층 메리엘 홀)</p>
             </div>
             
-            <!-- Map Image Section: mapimage.png를 직접 불러옵니다 -->
             <div class="w-full rounded-lg overflow-hidden border border-stone-100 shadow-sm">
                 <img src="mapimage.png" class="w-full h-auto block" alt="세인트 메리엘 지도">
             </div>
@@ -169,33 +174,17 @@
         </div>
     </section>
 
-    <!-- Face Photos (between Parking and Account Transfer) -->
+    <!-- Face Photos -->
     <section class="py-14 px-6 bg-white fade-in">
         <div class="grid grid-cols-2 gap-4">
-            <!-- face01 -->
             <div class="h-44 rounded-lg overflow-hidden border border-stone-100 shadow-sm bg-stone-50 flex items-center justify-center">
-                <img
-                    src="face01.jpg"
-                    onerror="this.onerror=null; this.src='face01.png';"
-                    alt="face01"
-                    class="w-full h-full object-contain"
-                    loading="lazy"
-                >
+                <img src="face01.jpg" onerror="this.onerror=null; this.src='face01.png';" alt="face01" class="w-full h-full object-contain" loading="lazy">
             </div>
-
-            <!-- face02 -->
             <div class="h-44 rounded-lg overflow-hidden border border-stone-100 shadow-sm bg-stone-50 flex items-center justify-center">
-                <img
-                    src="face02.jpg"
-                    onerror="this.onerror=null; this.src='face02.png';"
-                    alt="face02"
-                    class="w-full h-full object-contain"
-                    loading="lazy"
-                >
+                <img src="face02.jpg" onerror="this.onerror=null; this.src='face02.png';" alt="face02" class="w-full h-full object-contain" loading="lazy">
             </div>
         </div>
     </section>
-
 
     <!-- Account Transfer (축의금) -->
     <section class="py-20 px-8 bg-stone-50 fade-in">
@@ -203,6 +192,7 @@
         <p class="text-center text-xs text-gray-400 mb-10 leading-relaxed">축복의 의미로 보내주시는 소중한 마음,<br>감사히 전달받겠습니다.</p>
         
         <div class="space-y-4">
+            <!-- 신랑측 -->
             <div class="border border-stone-200 bg-white rounded-lg shadow-sm">
                 <button onclick="toggleAccordion('groom-account')" class="w-full px-5 py-4 flex justify-between items-center text-left hover:bg-stone-50 transition">
                     <span class="font-medium">신랑측 계좌번호</span>
@@ -219,6 +209,7 @@
                 </div>
             </div>
 
+            <!-- 신부측 -->
             <div class="border border-stone-200 bg-white rounded-lg shadow-sm">
                 <button onclick="toggleAccordion('bride-account')" class="w-full px-5 py-4 flex justify-between items-center text-left hover:bg-stone-50 transition">
                     <span class="font-medium">신부측 계좌번호</span>
@@ -238,7 +229,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 bg-white"></footer>
+    <footer class="py-12 bg-[#fcfbf8]"></footer>
 
     <!-- Simple Toast Notification -->
     <div id="toast" class="fixed bottom-10 left-1/2 -translate-x-1/2 bg-black/80 text-white text-xs px-6 py-3 rounded-full opacity-0 pointer-events-none transition-opacity z-50">
