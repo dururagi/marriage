@@ -176,12 +176,18 @@
 
     <!-- Face Photos -->
     <section class="py-14 px-6 bg-white fade-in">
-        <div class="grid grid-cols-2 gap-4">
-            <div class="h-44 rounded-lg overflow-hidden border border-stone-100 shadow-sm bg-stone-50 flex items-center justify-center">
-                <img src="face01.jpg" onerror="this.onerror=null; this.src='face01.png';" alt="face01" class="w-full h-full object-contain" loading="lazy">
+        <div class="grid grid-cols-2 grid-rows-2 gap-3">
+            <!-- 왼쪽: 세로 사진 (2행 차지) -->
+            <div class="row-span-2 rounded-lg overflow-hidden border border-stone-100 shadow-sm bg-stone-50">
+                <img src="newface01.jpg" onerror="this.onerror=null; this.src='newface01.png';" alt="newface01" class="w-full h-full object-cover" loading="lazy">
             </div>
-            <div class="h-44 rounded-lg overflow-hidden border border-stone-100 shadow-sm bg-stone-50 flex items-center justify-center">
-                <img src="face02.jpg" onerror="this.onerror=null; this.src='face02.png';" alt="face02" class="w-full h-full object-contain" loading="lazy">
+            <!-- 오른쪽 위: 가로 사진 -->
+            <div class="rounded-lg overflow-hidden border border-stone-100 shadow-sm bg-stone-50 aspect-[4/3]">
+                <img src="newface02.jpg" onerror="this.onerror=null; this.src='newface02.png';" alt="newface02" class="w-full h-full object-cover" loading="lazy">
+            </div>
+            <!-- 오른쪽 아래: 가로 사진 -->
+            <div class="rounded-lg overflow-hidden border border-stone-100 shadow-sm bg-stone-50 aspect-[4/3]">
+                <img src="newface03.jpg" onerror="this.onerror=null; this.src='newface03.png';" alt="newface03" class="w-full h-full object-cover" loading="lazy">
             </div>
         </div>
     </section>
